@@ -13,7 +13,7 @@
     "@uniscale-sdk/ActorCharacter-Messagethreads": "^1.0.6",
     "axios": "^1.5.1",
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "express": "^4.19.2"
   },
   "devDependencies": {
     "@types/cors": "^2.8.15",
