@@ -1,12 +1,19 @@
 import { BackendAction, PlatformInterceptorBuilder, Result } from "@uniscale-sdk/ActorCharacter-Messagethreads"
 import { generateUUID } from "@uniscale-sdk/ActorCharacter-Messagethreads/models/uuid"
 import { UserFull } from "@uniscale-sdk/ActorCharacter-Messagethreads/sdk/UniscaleDemo/Account/Account"
-import { LookupUsers } from "@uniscale-sdk/ActorCharacter-Messagethreads/sdk/UniscaleDemo/Account_1_0/Functionality/ServiceToModule/Account/GetUsers/QuickLookup"
-import { SearchAllUsers } from "@uniscale-sdk/ActorCharacter-Messagethreads/sdk/UniscaleDemo/Account_1_0/Functionality/ServiceToModule/Account/GetUsers/SearchUsersByHandle"
-import { GetOrRegister } from "@uniscale-sdk/ActorCharacter-Messagethreads/sdk/UniscaleDemo/Account_1_0/Functionality/ServiceToModule/Account/Registration/ContinueToApplication"
+
 import express from 'express'
 import cors from 'cors'
 import { platformSession } from "../session-dispatcher"
+import {
+    GetOrRegister
+} from "@uniscale-sdk/ActorCharacter-Messagethreads/sdk/UniscaleDemo/Account_1_0/Functionality/ServiceToModule/Account/Registration/ContinueToApplication";
+import {
+    LookupUsers
+} from "@uniscale-sdk/ActorCharacter-Messagethreads/sdk/UniscaleDemo/Account_1_0/Functionality/ServiceToModule/Account/GetUsers/QuickLookup";
+import {
+    SearchAllUsers
+} from "@uniscale-sdk/ActorCharacter-Messagethreads/sdk/UniscaleDemo/Account_1_0/Functionality/ServiceToModule/Account/GetUsers/SearchUsersByHandle";
 
 // Create in memory cache of users
 const users: UserFull[] = []
